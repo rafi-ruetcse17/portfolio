@@ -12,6 +12,7 @@ export default function Navigation() {
     { id: 'about', label: 'About' },
     { id: 'experience', label: 'Experience' },
     { id: 'skills', label: 'Skills' },
+    { id: 'cp', label: 'CP' },
     { id: 'projects', label: 'Projects' },
     { id: 'contact', label: 'Contact' },
   ]
@@ -26,7 +27,7 @@ export default function Navigation() {
     const handleScroll = () => {
       const scrollPosition = window.scrollY + 150
 
-      const sectionIds = ['home', 'about', 'experience', 'skills', 'projects', 'contact']
+      const sectionIds = ['home', 'about', 'experience', 'skills', 'cp', 'projects', 'contact']
       
       for (let i = sectionIds.length - 1; i >= 0; i--) {
         const element = document.getElementById(sectionIds[i])

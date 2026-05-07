@@ -85,30 +85,6 @@ export default function Skills() {
             ))}
           </div>
 
-          {/* Competitive Programming Stats */}
-          <div className="mt-12">
-            <div className="p-8 rounded-xl border border-border bg-gradient-to-br from-card/50 to-card/25 hover:border-primary/50 transition-colors duration-200">
-              <h3 className="text-2xl font-bold mb-6 text-foreground">Competitive Programming</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                <div className="p-4 rounded-lg bg-card/50">
-                  <p className="text-muted-foreground text-sm mb-1">Problems Solved</p>
-                  <p className="text-3xl font-bold text-primary">2000+</p>
-                </div>
-                <div className="p-4 rounded-lg bg-card/50">
-                  <p className="text-muted-foreground text-sm mb-1">Max Codeforces Rating</p>
-                  <p className="text-3xl font-bold text-primary">1541</p>
-                </div>
-                <div className="p-4 rounded-lg bg-card/50">
-                  <p className="text-muted-foreground text-sm mb-1">ICPC Asia 2021</p>
-                  <p className="text-3xl font-bold text-primary">71st</p>
-                </div>
-                <div className="p-4 rounded-lg bg-card/50">
-                  <p className="text-muted-foreground text-sm mb-1">Meta Hacker Cup</p>
-                  <p className="text-3xl font-bold text-primary">Round 2</p>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>

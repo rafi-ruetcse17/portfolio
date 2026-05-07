@@ -8,13 +8,21 @@ const projects = [
     title: "KriyaKarak",
     description:
       "Implemented real-time chat functionality for a SaaS product using Socket.IO and REST APIs. Built comprehensive API documentation for seamless integration.",
-    tech: ["Socket.IO", "React", "Node.js", "Express"],
+    tech: [
+      "React",
+      "Nextjs",
+      "Socket.IO",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "REST APIs",
+    ],
     highlights: [
       "Real-time messaging",
       "API documentation",
       "Production deployment",
     ],
-    link: "#",
+    link: "https://kriyakarak.com/",
   },
   {
     title: "Perses - Cloud Native Observability",
@@ -41,28 +49,16 @@ const projects = [
     link: "#",
   },
   {
-    title: "Performance Monitoring System",
+    title: "Manage Devs",
     description:
-      "Integrated Winston logger with Node.js and customized it to monitor API interactions and track Next.js Server-Side Rendering performance across environments.",
-    tech: ["Winston", "Node.js", "Next.js", "Logging"],
+      "Modern web application for tracking developer daily check-ins, featuring a clean, reactive dashboard for real-time activity monitoring.",
+    tech: ["Vue 3", "TypeScript", "Bulma CSS", "Vite", "Axios"],
     highlights: [
-      "Multi-environment monitoring",
-      "Performance tracking",
-      "Production insights",
+      "Daily check-ins dashboard",
+      "Real-time data integration",
+      "Responsive design with Bulma",
     ],
-    link: "#",
-  },
-  {
-    title: "API Optimization Project",
-    description:
-      "Optimized API performance through pagination and payload filtering. Analyzed production server logs to identify bottlenecks and improve response times.",
-    tech: ["Node.js", "PostgreSQL", "Optimization", "DevOps"],
-    highlights: [
-      "30% performance improvement",
-      "Pagination implementation",
-      "Query optimization",
-    ],
-    link: "#",
+    link: "https://github.com/rafi-ruetcse17/manage_devs",
   },
 ];
 
