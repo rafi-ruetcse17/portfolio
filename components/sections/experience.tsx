@@ -65,46 +65,48 @@ export default function Experience() {
   }, [])
 
   return (
-    <section id="experience" ref={sectionRef} className="min-h-screen flex items-center py-20 px-4">
+    <section id="experience" ref={sectionRef} className="py-24 px-4 bg-background">
       <div className="max-w-6xl mx-auto w-full">
         <div className="space-y-12">
-          <div>
-            <h2 className="text-4xl sm:text-5xl font-bold mb-4">
-              <span className="text-muted-foreground">Work </span>
-              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Experience</span>
-            </h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent rounded-full"></div>
+          <div className="border-b border-border pb-4">
+            <h2 className="text-3xl font-bold text-foreground">Experience</h2>
           </div>
 
-          <div className="space-y-8">
+          <div className="space-y-6">
             {experiences.map((exp, index) => (
               <div
                 key={index}
-                className="group p-6 rounded-xl border border-border bg-card/50 hover:border-primary/50 hover:bg-card transition-colors duration-200"
+                className="group p-8 rounded-xl border border-border bg-card shadow-sm hover:shadow-md transition-all duration-300 relative overflow-hidden"
               >
-                  <div className="flex items-start justify-between gap-4 mb-4">
-                    <div>
-                      <h3 className="text-2xl font-bold text-foreground group-hover:text-primary transition-colors">
-                        {exp.title}
-                      </h3>
-                      <p className="text-primary font-semibold">{exp.company}</p>
-                    </div>
-                    <div className="text-right text-sm text-muted-foreground whitespace-nowrap">
-                      <p className="font-medium">{exp.period}</p>
-                      <p>{exp.location}</p>
+                {/* Accent bar on the left like LinkedIn cards often have in some contexts, or just a clean card */}
+                <div className="absolute top-0 left-0 w-1 h-full bg-primary opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                
+                <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4 mb-6">
+                  <div className="space-y-1">
+                    <h3 className="text-xl font-bold text-foreground leading-tight">
+                      {exp.title}
+                    </h3>
+                    <p className="text-lg font-semibold text-primary">{exp.company}</p>
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground pt-1">
+                      <span>{exp.period}</span>
+                      <span>•</span>
+                      <span>{exp.location}</span>
                     </div>
                   </div>
+                </div>
 
-                  <p className="text-muted-foreground mb-4">{exp.description}</p>
+                <p className="text-foreground/80 leading-relaxed mb-6 font-medium">
+                  {exp.description}
+                </p>
 
-                  <ul className="space-y-2">
-                    {exp.highlights.map((highlight, i) => (
-                      <li key={i} className="flex items-start gap-3 text-muted-foreground">
-                        <ChevronRight className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span>{highlight}</span>
-                      </li>
-                    ))}
-                  </ul>
+                <ul className="space-y-3">
+                  {exp.highlights.map((highlight, i) => (
+                    <li key={i} className="flex items-start gap-3 text-sm text-muted-foreground group/item">
+                      <div className="w-1.5 h-1.5 rounded-full bg-primary/40 mt-1.5 flex-shrink-0 group-hover/item:bg-primary transition-colors"></div>
+                      <span className="leading-relaxed">{highlight}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>

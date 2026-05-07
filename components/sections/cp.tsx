@@ -64,39 +64,30 @@ export default function CP() {
   }, [])
 
   return (
-    <section id="cp" ref={sectionRef} className="min-h-screen flex items-center py-20 px-4">
+    <section id="cp" ref={sectionRef} className="py-24 px-4 bg-card border-y border-border">
       <div className="max-w-6xl mx-auto w-full">
         <div className="space-y-12">
-          {/* Section Header */}
-          <div className="space-y-4">
-            <h2 className="text-4xl sm:text-5xl font-bold">
-              <span className="text-muted-foreground">Competitive </span>
-              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Programming</span>
-            </h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent rounded-full"></div>
-            <p className="text-lg text-muted-foreground max-w-3xl">
-              Passionate about algorithmic problem solving and competitive programming. Regularly participating in global contests and optimizing solutions.
-            </p>
+          <div className="border-b border-border pb-4">
+            <h2 className="text-3xl font-bold text-foreground">Competitive Programming</h2>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {/* Achievements List */}
-            <div className="lg:col-span-2 space-y-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="md:col-span-2 space-y-6">
               {achievements.map((achievement, index) => (
                 <div
                   key={index}
-                  className="group p-6 rounded-xl border border-border bg-card/50 hover:border-primary/50 hover:bg-card transition-all duration-300"
+                  className="group p-6 rounded-xl border border-border bg-background shadow-sm hover:shadow-md transition-all duration-300"
                 >
                   <div className="flex gap-4">
-                    <div className="p-3 rounded-lg bg-primary/10 text-primary h-fit">
+                    <div className="p-3 rounded-lg bg-primary/10 text-primary h-fit group-hover:scale-110 transition-transform">
                       <achievement.icon className="w-6 h-6" />
                     </div>
                     <div className="space-y-1">
-                      <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
+                      <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors">
                         {achievement.title}
                       </h3>
-                      <p className="text-primary text-sm font-semibold">{achievement.event}</p>
-                      <p className="text-muted-foreground text-sm leading-relaxed pt-2">
+                      <p className="text-primary text-sm font-semibold tracking-wide uppercase">{achievement.event}</p>
+                      <p className="text-foreground/70 text-sm leading-relaxed pt-2">
                         {achievement.description}
                       </p>
                     </div>
@@ -105,24 +96,24 @@ export default function CP() {
               ))}
             </div>
 
-            {/* Sidebar Stats & Links */}
             <div className="space-y-6">
-              {/* Stats Card */}
-              <div className="p-8 rounded-2xl border border-border bg-gradient-to-br from-card to-card/50 space-y-6">
-                <h3 className="text-xl font-bold text-foreground">Platform Stats</h3>
+              <div className="p-8 rounded-2xl border border-border bg-background shadow-sm space-y-8 sticky top-24">
                 <div className="space-y-4">
-                  <div className="flex justify-between items-center p-4 rounded-lg bg-background/50 border border-border">
-                    <span className="text-muted-foreground">Problems Solved</span>
-                    <span className="text-2xl font-bold text-primary">2000+</span>
-                  </div>
-                  <div className="flex justify-between items-center p-4 rounded-lg bg-background/50 border border-border">
-                    <span className="text-muted-foreground">CF Max Rating</span>
-                    <span className="text-2xl font-bold text-primary">1541</span>
+                  <h3 className="text-lg font-bold text-foreground uppercase tracking-wider text-center border-b border-border pb-4">Stats</h3>
+                  <div className="grid grid-cols-1 gap-4">
+                    <div className="p-4 rounded-lg bg-muted/30 border border-border text-center">
+                      <p className="text-3xl font-bold text-primary">2000+</p>
+                      <p className="text-xs font-bold text-muted-foreground uppercase mt-1">Problems Solved</p>
+                    </div>
+                    <div className="p-4 rounded-lg bg-muted/30 border border-border text-center">
+                      <p className="text-3xl font-bold text-primary">1541</p>
+                      <p className="text-xs font-bold text-muted-foreground uppercase mt-1">CF Max Rating</p>
+                    </div>
                   </div>
                 </div>
 
-                <div className="pt-4 space-y-3">
-                  <p className="text-sm font-semibold text-foreground">Quick Links</p>
+                <div className="space-y-4">
+                  <h3 className="text-sm font-bold text-foreground uppercase tracking-wider">Profiles</h3>
                   <div className="grid grid-cols-1 gap-3">
                     <a
                       href="https://codeforces.com/profile/rafi_alam?mobile=true"
@@ -132,9 +123,9 @@ export default function CP() {
                     >
                       <div className="flex items-center gap-3">
                         <Code2 className="w-5 h-5 text-primary" />
-                        <span className="text-sm font-medium">Codeforces Profile</span>
+                        <span className="text-sm font-bold text-foreground/80 group-hover:text-primary transition-colors">Codeforces</span>
                       </div>
-                      <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary" />
+                      <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
                     </a>
                     <a
                       href="https://leetcode.com/u/_BOSS_/"
@@ -144,9 +135,9 @@ export default function CP() {
                     >
                       <div className="flex items-center gap-3">
                         <Target className="w-5 h-5 text-primary" />
-                        <span className="text-sm font-medium">LeetCode Profile</span>
+                        <span className="text-sm font-bold text-foreground/80 group-hover:text-primary transition-colors">LeetCode</span>
                       </div>
-                      <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary" />
+                      <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
                     </a>
                     <a
                       href="https://drive.google.com/drive/folders/1zWf7iHvH4reJXFfTp2bPE9xpE_XAY4Xb?usp=sharing"
@@ -156,9 +147,9 @@ export default function CP() {
                     >
                       <div className="flex items-center gap-3">
                         <GraduationCap className="w-5 h-5 text-primary" />
-                        <span className="text-sm font-medium">Certifications</span>
+                        <span className="text-sm font-bold text-foreground/80 group-hover:text-primary transition-colors">Certifications</span>
                       </div>
-                      <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary" />
+                      <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
                     </a>
                   </div>
                 </div>
