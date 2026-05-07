@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { ExternalLink } from 'lucide-react'
 
 export default function Navigation() {
@@ -46,8 +47,15 @@ export default function Navigation() {
   return (
     <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-md z-50 border-b border-border">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-        <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent hover:opacity-80 transition-opacity">
-          RA
+        <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+          <div className="relative w-10 h-10 rounded-full overflow-hidden border-2 border-primary/20">
+            <Image
+              src="/profile.jpeg"
+              alt="Rafi Alam"
+              fill
+              priority
+            />
+          </div>
         </Link>
 
         <div className="hidden md:flex items-center gap-1">

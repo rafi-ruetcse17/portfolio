@@ -12,6 +12,7 @@ const projects = [
       "React",
       "Nextjs",
       "Socket.IO",
+      "Redis",
       "Node.js",
       "Express",
       "MongoDB",
@@ -37,6 +38,19 @@ const projects = [
     link: "https://github.com/perses",
   },
   {
+    title: "Mapage Space Management",
+    description:
+      "Innovative platform for stylists to manage professional workspaces and for clients to discover high-quality service locations.",
+    tech: ["Next.js", "React", "Node.js", "MongoDB", "Socket.IO"],
+    highlights: [
+      "Resolved 20+ critical production issues",
+      "Implemented real-time chat using Socket.IO",
+      "Developed workspace customization features",
+      "Integrated detailed location management system",
+    ],
+    link: "https://mapage.net/",
+  },
+  {
     title: "Twitter Clone",
     description:
       "Full-featured social media application with email verification, post management, user follow system, profile editing, and direct messaging capabilities.",
@@ -46,7 +60,7 @@ const projects = [
       "User authentication",
       "Real-time updates",
     ],
-    link: "#",
+    link: "https://github.com/rafi-ruetcse17/twitter-clone",
   },
   {
     title: "Manage Devs",
